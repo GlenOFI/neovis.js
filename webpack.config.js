@@ -9,6 +9,7 @@ module.exports = {
         libraryTarget: 'umd',
         path: path.resolve(__dirname, 'dist')
     },
+    watch:true,
     module: {
         rules: [{
             test: /\.js$/,

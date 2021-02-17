@@ -21,7 +21,8 @@
 
     </style>
 
-    <script src="https://cdn.neo4jlabs.com/neovis.js/master/neovis.js"></script>
+    <!-- <script src="https://cdn.neo4jlabs.com/neovis.js/master/neovis.js"></script> -->
+    <script src="../dist/neovis.js"></script>
 
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -66,7 +67,7 @@
 
 <label for="url">URL</label><input id="url" name="url" type="text" value="bolt://localhost:7687"/><br/>
 <label for="user">Username</label><input id="user" name="user" type="text" value="neo4j"/><br/>
-<label for="pass">Password</label><input id="pass" name="pass" type="password" value="test"/>
+<label for="pass">Password</label><input id="pass" name="pass" type="password" value="1234"/>
 </div>
 
 <div><h3>Styling Nodes:</h3>
@@ -88,7 +89,7 @@
 
 <div><h3>Cypher query: </h3>
 
-<textarea rows="4" cols=50 id="cypher">MATCH (n)-[r:INTERACTS]->(m) RETURN n,r,m</textarea><br>
+<textarea rows="4" cols=50 id="cypher">MATCH p=(n)-[r]->(m) RETURN p LIMIT 25</textarea><br>
 
 <input type="submit" value="Submit" id="reload">
 <input type="submit" value="Stabilize" id="stabilize">

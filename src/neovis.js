@@ -306,7 +306,7 @@ export default class NeoVis {
 		let session = this._driver.session(this._database && { database: this._database });
 		const dataBuildPromises = [];
 		session
-			.run(_query, { limit: 30 })
+			.run(_query)
 			.subscribe({
 				onNext: (record) => {
 					recordCount++;
